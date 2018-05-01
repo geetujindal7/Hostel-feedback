@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+  <form>
+    First Name: <input type="text" ng-model="fn">
+    <br><br>
+    Last Name: <input type="text" ng-model="ln">
+    <br><br>
+    Favorite Car: <input type="checkbox" ng-model="all">
+    <input type="checkbox" ng-checked="all">Volvo<br>
+<input type="checkbox" ng-checked="all">Ford<br>
+<input type="checkbox" ng-checked="all">Mercedes<br>
+<br>
+Pick a topic:
+<input type="radio" ng-model="myVar" value="dogs">Dogs<br>
+<input type="radio" ng-model="myVar" value="tuts">Cats<br>
+<input type="radio" ng-model="myVar" value="cars">Elephants<br>
+  </form>
+
+  <div ng-switch="myVar">
+    <div ng-switch-when="dogs">
+       <h1>Dogs</h1>
+       <p>Welcome to a world of dogs.</p>
+    </div>
+    <div ng-switch-when="tuts">
+       <h1>Tutorials</h1>
+       <p>Learn from examples.</p>
+    </div>
+    <div ng-switch-when="cars">
+       <h1>Cars</h1>
+       <p>Read about cars.</p>
+    </div>
+  </div>
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+  $scope.fn = "";
+  $scope.ln = "Write Last name";
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset=UTF-8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<title>Front Page</title>
+<script src="javASCRIPT.js"></script>
+
+</head>
+<style>
+button
+  {
+    background-color: #cb1a12;
+    border: 0 solid #cacaca;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px 0;
+    padding: 20px 0;
+    text-decoration: none;
+    width: 100%;
+  }
+.image
+  {
+    width: 100%;
+    height: 93%;
+
+}
+    .b
+  {
+    font-size:70px;
+  }
+.a
+  {
+    float:right;
+    background-color:pink;
+  }
+.c
+  {
+    font-size:40px;
+  }
+
+</style>
+</head>
+<body>
+  <div class="container-fluid">
+    <header class="row">
+      <div class="col-md-12" style="background-color:grey">
+        <center>
+          <h1 class="b">Teresa Hostel</h1>
+          <h2>Chitkara University</h2>
+        </center>
+      </div>
+    </header>
+    <hr/>
+    <div class="row">
+      <div class="col-md-8">
+        <img class="img-responsive image" src="hostel.jpg ">
+      </div>
+      <div class="col-md-4" style="background-color:pink;">
+        <center>
+          <form class="c" action="mainpg2.html">
+            <label for="name">User Name:</label>
+            <input type="text" name="fname" size="21" onblur="allLetter()">
+            <br>
+            <label for="id">University Id:</label>
+            <input type="text" name="id" size="20" onblur="userid_validation(5,11)">
+            <br>
+            <label for="eid">Email:</label>
+            <input type="text" name="eid" size="21" onblur="ValidateEmail()">
+            <br>
+            <label for="name">Institute:</label>
+            <input type="text" name="name" size="21" onblur="allLetter()">
+            <br>
+            <label for="session">Session:</label>
+            <input type="text" name="session" size="20" onblur="userSession_validation(1,4)" >
+            <br>
+            <input type="submit" name="submit" value="Submit">
+          </form>
+        </center>
+      </div>
+      <div class="row">
+        <hr/>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
